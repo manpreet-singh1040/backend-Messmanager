@@ -20,6 +20,7 @@ router.post('/',async(req,res)=>{
     }
     catch(err){
         console.log(`database connection error!!!!`);
+        console.log(err);
         res.status(500);
     }
 })
