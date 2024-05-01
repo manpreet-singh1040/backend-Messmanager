@@ -76,7 +76,6 @@ async function run() {
 }
 run().catch(console.dir);*/
 
-
 const app=express();
 app.use(cors({
     origin:'https://nitjmessman.netlify.app',
