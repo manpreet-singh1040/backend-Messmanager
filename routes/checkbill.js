@@ -7,8 +7,8 @@ const bill=require('../models/bill');
 router.post('/',async(req,res)=>{
     let rollno=req.body.rollno;
     try{
-        await mongoose.connect("mongodb+srv://xyz:rambo999@cluster0.we6xycn.mongodb.net/");
-        console.log(`database connected!!`);
+        //await mongoose.connect("mongodb+srv://xyz:rambo999@cluster0.we6xycn.mongodb.net/");
+        //console.log(`database connected!!`);
         {
             let data=await bill.findOne({rollno:rollno});
             let status=data? true:false;

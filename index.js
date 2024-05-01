@@ -19,18 +19,18 @@ const fun=async(rollno)=>{
     try{
         await mongoose.connect("mongodb+srv://xyz:rambo999@cluster0.we6xycn.mongodb.net/")
         console.log(`database connected!!`);
-        console.log(`inside`);
+        /*console.log(`inside`);
         const filter={rollno:rollno}
         let data= await bill.findOne(filter);
         //console.log(data);
         console.log(`data found!!`);
-        return data;
+        return data;*/
     }
     catch(err){
         console.log(err);
     }
 }
-//fun();
+fun();
 
 //databasebillupload();
 
