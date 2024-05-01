@@ -79,7 +79,7 @@ run().catch(console.dir);*/
 
 const app=express();
 app.use(cors({
-    origin:'https://nitjmessmanager.netlify.app',
+    origin:'https://nitjmessman.netlify.app',
     credentials:true
 }));
 app.use((req,res,next)=>{
