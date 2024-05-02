@@ -9,7 +9,7 @@ router.get('/',(req,res)=>{
     res.cookie("token","fkph",{
         httpOnly: false,
         maxAge:900000,
-        sameSite:none,
+        sameSite:"none",
         path:"https://nitjmessman.netlify.app"
     })
     console.log("checkb cookie sent");
