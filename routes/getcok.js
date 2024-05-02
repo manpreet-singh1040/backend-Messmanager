@@ -10,7 +10,8 @@ router.get('/',(req,res)=>{
         httpOnly: false,
         maxAge:900000,
         sameSite:"none",
-        path:"https://nitjmessman.netlify.app"
+        path:"https://nitjmessman.netlify.app",
+        secure:true
     })
     console.log("checkb cookie sent");
     //res.json({mes:"cookie sent"});
