@@ -11,8 +11,13 @@ const loginController=(req,res)=>{
         let sessionToken=jwt.sign(user,"PanDiFu");
         console.log(`cookie send`);
         res.cookie("sessionToken",sessionToken,{
-            httpOnly:true,
-            sameSite: 'Strict'});
+            httpOnly:false,
+            sameSite: 'none',
+            maxAge:900000,
+            path:"/",
+            secure:true,
+            domain:"https://nitjmessman.netlify.app"
+        });
        res.send(JSON.stringify({status:true}));
     }
     else{
