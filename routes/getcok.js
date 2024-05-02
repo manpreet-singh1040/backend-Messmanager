@@ -8,7 +8,9 @@ router.get('/',(req,res)=>{
     console.log(cook);
     res.cookie("token","fkph",{
         httpOnly: false,
-        maxAge:900000
+        maxAge:900000,
+        sameSite:none,
+        path:"https://nitjmessman.netlify.app"
     })
     console.log("checkb cookie sent");
     //res.json({mes:"cookie sent"});
