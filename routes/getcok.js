@@ -11,8 +11,7 @@ router.get('/',(req,res)=>{
         maxAge:900000,
         sameSite:"none",
         path:"/",
-        secure:true,
-        domain:"https://nitjmessman.netlify.app"
+        secure:true
     })
     console.log("checkb cookie sent");
     //res.json({mes:"cookie sent"});

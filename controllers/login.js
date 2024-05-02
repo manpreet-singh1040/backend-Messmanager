@@ -15,8 +15,7 @@ const loginController=(req,res)=>{
             sameSite: 'none',
             maxAge:900000,
             path:"/",
-            secure:true,
-            domain:"https://nitjmessman.netlify.app"
+            secure:true
         });
        res.send(JSON.stringify({status:true}));
     }
