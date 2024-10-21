@@ -8,13 +8,19 @@ const fun=async()=>{
         console.log(`database connected!!`);
         let data=billdata();
         data.forEach(async(obj)=>{
-            await bill.create({
-                roomno:obj.roomno,
-                rollno:obj.rollno,
-                name:obj.name,
-                hostel:'MBH-B',
-                bill:[obj.bill[0]]
-            });
+              let data=await bill.findOne({rollno:obj.rollno});
+            if(obj.rollno!==undefined)
+            {
+                const filter={rollno:obj.rollno};
+                const update={
+                    $push:{
+                        bill:obj.bill
+                    }
+                }
+                await bill.updateOne(filter,update)
+                console.log("updated!!")
+
+            }
 
         })
         console.log(`bills are uploaded!!`);
@@ -24,5 +30,5 @@ const fun=async()=>{
         console.log(err);
     }
 }
-
-module.exports=fun;
+fun();
+//module.exports=fun;

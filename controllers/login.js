@@ -8,6 +8,7 @@ const loginController=(req,res)=>{
             username:req.body.username,
             password:req.body.password
         }
+        
         let sessionToken=jwt.sign(user,"PanDiFu");
         console.log(`cookie send`);
         res.cookie("sessionToken",sessionToken,{
